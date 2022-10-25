@@ -44,6 +44,12 @@
                     <i class="icon-briefcase menu-icon"></i>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin-complaints') }}">
+                    <span class="menu-title">Complaints</span>
+                    <i class="icon-speech  menu-icon"></i>
+                </a>
+            </li>
         @else
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('user-payment') }}">
@@ -52,7 +58,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('user-complaints') }}">
                     <span class="menu-title">Complaints</span>
                     <i class="icon-speech  menu-icon"></i>
                 </a>

@@ -6,7 +6,7 @@
                     <div class="card-body">
                         <div class="d-sm-flex align-items-center mb-4">
                             <h4 class="card-title mb-sm-0">Transactions</h4>
-                            <a href="#" class="text-dark ml-auto mb-3 mb-sm-0"> print transactions</a>
+                            <a href="{{ route('admin-transaction-report') }}" class="text-dark ml-auto mb-3 mb-sm-0"> print transactions</a>
                         </div>
                         <div class="table-responsive border rounded p-1">
                             <table class="table">
@@ -41,7 +41,6 @@
                             </table>
                         </div>
                         <div class="d-flex mt-4 flex-wrap">
-                            <p class="text-muted">Showing 1 to 10 of 57 entries</p>
                             <nav class="ml-auto">
                                 {{$transactions->links('pagination::bootstrap-4')}}
                             </nav>

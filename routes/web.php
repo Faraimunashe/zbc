@@ -34,6 +34,8 @@ Route::group(['middleware' => ['auth', 'role:admin']], function () {
     Route::get('/admin/transactions', 'App\Http\Controllers\admin\TransactionController@index')->name('admin-transactions');
     Route::get('/admin/transaction-report', 'App\Http\Controllers\admin\TransactionController@report')->name('admin-transaction-report');
 
+    Route::get('/admin/complaints', 'App\Http\Controllers\admin\ComplaintController@index')->name('admin-complaints');
+
 });
 
 Route::group(['middleware' => ['auth', 'role:user']], function () {
@@ -44,6 +46,9 @@ Route::group(['middleware' => ['auth', 'role:user']], function () {
 
     Route::get('/user/statement', 'App\Http\Controllers\user\StatementController@index')->name('user-statement');
     Route::get('/user/download-statement', 'App\Http\Controllers\user\StatementController@download')->name('user-download_statement');
+
+    Route::get('/user/complaints', 'App\Http\Controllers\user\ComplaintController@index')->name('user-complaints');
+    Route::post('/user/add-complaint', 'App\Http\Controllers\user\ComplaintController@add')->name('user-add-complaint');
 
 });
 
